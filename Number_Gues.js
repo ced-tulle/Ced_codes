@@ -32,5 +32,4 @@ async function main() {
   console.log(`\nOut of tries! The number was ${secret}.`);
   rl.close();
 }
-
 main();
