@@ -1,13 +1,8 @@
-// Number Guessing Game
-// Run with: node number-guessing-game.js
-
 const readline = require("readline/promises");
 const { stdin: input, stdout: output } = require("process");
 
 async function main() {
   const rl = readline.createInterface({ input, output });
-
-  // Pick a random whole number from 1 to 100.
   const secret = Math.floor(Math.random() * 100) + 1;
   const maxTries = 7;
   let tries = 0;
@@ -21,7 +16,7 @@ async function main() {
 
     if (answer.trim() === "" || !Number.isInteger(guess) || guess < 1 || guess > 100) {
       console.log("Please type a whole number from 1 to 100.");
-      continue; // invalid input does not use up a try
+      continue; 
     }
 
     tries++;
